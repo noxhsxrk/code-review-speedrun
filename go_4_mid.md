@@ -24,7 +24,7 @@ func main() {
 <details>
 <summary>เฉลย</summary>
 
-## เฉลย (2 จุด)
+## เฉลย
 
 บรรทัด var m map[rune]int ถูกใช้งานโดยไม่ได้ make ก่อน (เขียนค่าเข้า map nil จะ panic)
 

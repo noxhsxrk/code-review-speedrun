@@ -27,7 +27,7 @@ func main() {
 <details>
 <summary>เฉลย</summary>
 
-## เฉลย (2 จุด)
+## เฉลย
 
 struct person ใช้ชื่อฟิลด์ตัวเล็ก (name, age) ทำให้ encoding/json เข้าถึงไม่ได้
 

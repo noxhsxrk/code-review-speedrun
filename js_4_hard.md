@@ -3,14 +3,13 @@
 ```javascript
 async function getUserDetails(ids) {
     let results = [];
-    let debug = []; // distraction
-    let user; // reused var
+    let user;
 
     for (let id of ids) {
         user = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
             .then(res => res.json());
         debug.push(user.username);
-        if (user.isActive) { // BUG: user.isActive may be undefined
+        if (user.isActive) {
             results.push(user);
         }
     }

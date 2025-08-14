@@ -27,7 +27,7 @@ func Parse(r io.Reader) (User, error) {
 
 ## เฉลย
 
-- แท็กผิด (mail) ทำให้ Email ไม่แม็ป• แก้: json:"email"
-
+ปัญหา: tag json:"mail" ทำให้ Email ไม่แมปจาก JSON จริง
+วิธีแก้: เปลี่ยนเป็น json:"email"
 
 </details>
