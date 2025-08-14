@@ -6,22 +6,6 @@ A collection of programming challenges and exercises covering Go, JavaScript, an
 
 This repository contains coding challenges designed to test programming skills across multiple languages. Each challenge presents code with bugs or issues, followed by solutions.
 
-## Structure
-
-### Go Challenges (5 files)
-- JSON parsing and struct tags
-- Error handling patterns
-- Type safety
-
-### JavaScript Challenges (7 files)  
-- Express.js API development
-- Security vulnerabilities
-- Async/await patternsx
-
-### SQL Challenges (2 files)
-- NULL value handling
-- Query optimization
-
 ## Format
 
 Each challenge includes:
