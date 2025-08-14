@@ -1,22 +1,28 @@
 # JavaScript 1
-
 ```javascript
-// /users?id=123
-import express from 'express'
-import { db } from './db'
-const app = express()
 
-app.get('/users', async (req, res) => {
-  const id = req.query.id as string
-  if (!id) {
-    res.status(400).send('missing id')
+async function validateUser(user) {
+  console.log('Validating user:', user.name)
+  if (!user.email.includes('@')) {
+    console.error('❌ Invalid email')
   }
+  console.log('Validation passed')
+}
 
-  const sql = `SELECT * FROM users WHERE id = ${id}`
-  const result = await db.query(sql) 
+async function saveUser(user) {
+  console.log('Saving user to DB...')
+  await new Promise(r => setTimeout(r, 200))
+  console.log('✅ Saved:', user.name)
+}
 
-  res.json(result.rows)
-})
+async function main() {
+  const user = { name: 'Bob', email: 'bob-at-example.com' }
+  await validateUser(user)
+  await saveUser(user)
+}
+
+main()
+
 ```
 
 <details>
@@ -24,11 +30,8 @@ app.get('/users', async (req, res) => {
 
 ## เฉลย
 
-- Missing return หลังส่ง 400 → โค้ดอาจส่ง response ซ้ำ / ดำเนินต่อหลัง error.• แก้: if (!id) return res.status(400).send('missing id')
+ข้อผิดพลาด: ไม่มี return หลัง validation fail ทำให้ saveUser ทำงานต่อ
+if (!user.email.includes('@')) return console.error('❌ Invalid email')
 
-<details>
-    <summary>hidden</summary>
-    - SQL Injection จากการต่อสตริงด้วย id.• แก้: ใช้ parameterized query เช่น WHERE id = $1, db.query('... where id = $1', [id])
-</details>
 
 </details>
