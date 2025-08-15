@@ -24,7 +24,14 @@ func main() {
 
 ## เฉลย
 
-user เป็น nil ทำให้เกิด panic เมื่อพยายามเข้าถึง user.Name
-วิธีแก้: ตรวจสอบ user ว่าเป็น nil ก่อนใช้งาน
+- ปัญหา: user เป็น nil ทำให้เกิด panic เมื่อพยายามเข้าถึง user.Name
+- วิธีแก้: ตรวจสอบ user ว่าเป็น nil ก่อนใช้งาน
+
+```go
+if user == nil {
+  return ""
+}
+
+```
 
 </details>

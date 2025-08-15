@@ -35,6 +35,12 @@ func Process(db *sql.DB, id string) error {
 
 ## เฉลย
 
-ลืมส่ง Body ไปยัง API ด้วย `http.Post()`
+- ลืมส่ง Body ไปยัง API ด้วย `http.Post()`
+- แก้:
+
+```go
+body, _ := json.Marshal(o)
+resp, _ := http.Post("https://api.example.com/orders", "application/json", bytes.NewBuffer(body))
+```
 
 </details>

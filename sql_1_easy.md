@@ -11,6 +11,14 @@ WHERE deleted_at = NULL;
 
 # เฉลย
 
-- = NULL จะได้ UNKNOWN เสมอ → ไม่คืนแถวใดๆ• แก้: WHERE deleted_at IS NULL
+`= NULL` จะได้ UNKNOWN เสมอ → ไม่คืนแถวใดๆ
+
+- แก้:
+
+```sql
+SELECT *
+FROM tasks
+WHERE deleted_at IS NULL;
+```
 
 </details>

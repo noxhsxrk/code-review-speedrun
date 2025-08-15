@@ -14,8 +14,10 @@ WHERE id NOT IN (SELECT product_id FROM order_items);
 ปัญหา: ถ้า subquery คืน NULL สักค่าเดียว ผลลัพธ์จะเป็นค่าว่างหมด
 วิธีแก้: กรอง NULL ออกจาก subquery
 
+```sql
 WHERE id NOT IN (
   SELECT product_id FROM order_items WHERE product_id IS NOT NULL
 );
+```
 
 </details>

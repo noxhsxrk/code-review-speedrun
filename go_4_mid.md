@@ -26,11 +26,12 @@ func main() {
 
 ## เฉลย
 
-บรรทัด var m map[rune]int ถูกใช้งานโดยไม่ได้ make ก่อน (เขียนค่าเข้า map nil จะ panic)
+- บรรทัด var m map[rune]int ถูกใช้งานโดยไม่ได้ make ก่อน (เขียนค่าเข้า map nil จะ panic)
+- แก้: `m := make(map[rune]int)`
 
 ```go
 func countLetters(s string) map[rune]int {
-	m := make(map[rune]int) 
+	m := make(map[rune]int)
 	for _, r := range s {
 		m[r] = m[r] + 1
 	}

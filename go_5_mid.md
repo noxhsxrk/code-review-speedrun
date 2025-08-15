@@ -8,7 +8,7 @@ import (
 	"fmt"
 )
 
-type person struct { 
+type person struct {
 	name string
 	age  int
 }
@@ -36,7 +36,6 @@ type Person struct {
     Name string `json:"name"`
     Age  int    `json:"age"`
 }
-
 ```
 
 </details>

@@ -9,6 +9,7 @@ This repository contains coding challenges designed to test programming skills a
 ## Format
 
 Each challenge includes:
+
 1. Problem code snippet
 2. Detailed solution with explanations
 3. Key learning points

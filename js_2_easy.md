@@ -2,11 +2,11 @@
 
 ```javascript
 // ตั้งคุกกี้อายุ 1 ชั่วโมง
-app.get('/login', (req, res) => {
-  const sid = 'abc123'
-  res.cookie('sid', sid, { expires: new Date(Date.now + 60 * 60 * 1000) })
-  res.send('ok')
-})
+app.get("/login", (req, res) => {
+  const sid = "abc123";
+  res.cookie("sid", sid, { expires: new Date(Date.now + 60 * 60 * 1000) });
+  res.send("ok");
+});
 ```
 
 <details>
@@ -14,6 +14,7 @@ app.get('/login', (req, res) => {
 
 ## เฉลย
 
-- ใช้ Date.now แทน Date.now() → ได้ Invalid Date • แก้: new Date(Date.now() + 60 * 60 * 1000)
+- ใช้ Date.now แทน Date.now() → ได้ Invalid Date
+- แก้: `new Date(Date.now() + 60 _ 60 _ 1000)`
 
 </details>
