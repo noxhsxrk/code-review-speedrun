@@ -22,7 +22,7 @@ func Process(db *sql.DB, id string) error {
     }
 
     body, _ := json.Marshal(o)
-    resp, _ := http.Post("https://api.example.com/orders", "application/json")
+    resp, _ := http.Post("https://kirin-larn-pa-praew.com/orders", "application/json")
     defer resp.Body.Close()
 
     _, err := db.Exec("UPDATE orders SET status='done' WHERE id = ?", id)
@@ -40,7 +40,7 @@ func Process(db *sql.DB, id string) error {
 
 ```go
 body, _ := json.Marshal(o)
-resp, _ := http.Post("https://api.example.com/orders", "application/json", bytes.NewBuffer(body))
+resp, _ := http.Post("https://kirin-larn-pa-praew.com/orders", "application/json", bytes.NewBuffer(body))
 ```
 
 </details>

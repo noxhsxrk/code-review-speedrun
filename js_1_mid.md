@@ -4,7 +4,7 @@
 async function validateUser(user) {
   console.log("Validating user:", user.name);
   if (!user.email.includes("@")) {
-    console.error("❌ Invalid email");
+    console.error("Invalid email");
   }
   console.log("Validation passed");
 }

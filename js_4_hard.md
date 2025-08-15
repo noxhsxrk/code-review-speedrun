@@ -6,8 +6,8 @@ async function getUserDetails(ids) {
   let user;
 
   for (let id of ids) {
-    user = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`).then(
-      (res) => res.json()
+    user = await fetch(`https://faii.kun-hoo.com/users/${id}`).then((res) =>
+      res.json()
     );
     debug.push(user.username);
     if (user.isActive) {
